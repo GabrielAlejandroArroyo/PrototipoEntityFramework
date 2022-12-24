@@ -22,21 +22,6 @@ namespace PrototipoEntityFramework
             // Resticciones en el Backend Genero
             //modelBuilder.Entity<Genero>().Property(g => g.Nombre).HasMaxLength(150);
 
-
-            // Resticciones en el Backend Actor
-            //modelBuilder.Entity<Actor>().Property(a => a.Nombre).HasMaxLength(150);
-            modelBuilder.Entity<Actor>().Property(a => a.FechaNacimiento).HasColumnType("date");
-            modelBuilder.Entity<Actor>().Property(a => a.Fortuna).HasPrecision(18, 2);
-
-
-            // Resticciones en el Backend Peliculas
-            //modelBuilder.Entity<Pelicula>().Property(p => p.Titulo).HasMaxLength(150);
-            modelBuilder.Entity<Pelicula>().Property(p => p.FechaEstreno).HasColumnType("date");
-
-
-            // Resticciones en el Backend Comentario
-            modelBuilder.Entity<Comentario>().Property(c => c.Contenido).HasMaxLength(500);
-
         }
 
         //Sobresbitr que todos los campos stirng se preconfiguren en string de 150
